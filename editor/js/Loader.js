@@ -4,7 +4,6 @@
 
 import * as THREE from '../../build/three.module.js';
 
-import { ThreeMFLoader } from '../../examples/jsm/loaders/3MFLoader.js';
 import { AMFLoader } from '../../examples/jsm/loaders/AMFLoader.js';
 import { ColladaLoader } from '../../examples/jsm/loaders/ColladaLoader.js';
 import { DRACOLoader } from '../../examples/jsm/loaders/DRACOLoader.js';
@@ -97,20 +96,6 @@ var Loader = function ( editor ) {
 				reader.addEventListener( 'load', function ( event ) {
 
 					var loader = new TDSLoader();
-					var object = loader.parse( event.target.result );
-
-					editor.execute( new AddObjectCommand( editor, object ) );
-
-				}, false );
-				reader.readAsArrayBuffer( file );
-
-				break;
-
-			case '3mf':
-
-				reader.addEventListener( 'load', function ( event ) {
-
-					var loader = new ThreeMFLoader();
 					var object = loader.parse( event.target.result );
 
 					editor.execute( new AddObjectCommand( editor, object ) );

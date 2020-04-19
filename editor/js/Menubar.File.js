@@ -253,7 +253,10 @@ var MenubarFile = function ( editor ) {
 
 			saveArrayBuffer( result, 'scene.glb' );
 
-		}, { binary: true } );
+			// forceIndices: true, forcePowerOfTwoTextures: true
+			// to allow compatibility with facebook
+
+		}, { binary: true, forceIndices: true, forcePowerOfTwoTextures: true } );
 
 	} );
 	options.add( option );

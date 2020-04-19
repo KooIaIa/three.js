@@ -457,25 +457,13 @@ var Viewport = function ( editor ) {
 
 	signals.helperAdded.add( function ( object ) {
 
-		var picker = object.getObjectByName( 'picker' );
-
-		if ( picker !== undefined ) {
-
-			objects.push( picker );
-
-		}
+		objects.push( object.getObjectByName( 'picker' ) );
 
 	} );
 
 	signals.helperRemoved.add( function ( object ) {
 
-		var picker = object.getObjectByName( 'picker' );
-
-		if ( picker !== undefined ) {
-
-			objects.splice( objects.indexOf( picker ), 1 );
-
-		}
+		objects.splice( objects.indexOf( object.getObjectByName( 'picker' ) ), 1 );
 
 	} );
 

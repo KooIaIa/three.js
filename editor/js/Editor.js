@@ -401,47 +401,45 @@ Editor.prototype = {
 		var geometry = new THREE.SphereBufferGeometry( 2, 4, 2 );
 		var material = new THREE.MeshBasicMaterial( { color: 0xff0000, visible: false } );
 
-		return function ( object, helper ) {
+		return function ( object ) {
 
-			if ( helper === undefined ) {
+			var helper;
 
-				if ( object.isCamera ) {
+			if ( object.isCamera ) {
 
-					helper = new THREE.CameraHelper( object );
+				helper = new THREE.CameraHelper( object );
 
-				} else if ( object.isPointLight ) {
+			} else if ( object.isPointLight ) {
 
-					helper = new THREE.PointLightHelper( object, 1 );
+				helper = new THREE.PointLightHelper( object, 1 );
 
-				} else if ( object.isDirectionalLight ) {
+			} else if ( object.isDirectionalLight ) {
 
-					helper = new THREE.DirectionalLightHelper( object, 1 );
+				helper = new THREE.DirectionalLightHelper( object, 1 );
 
-				} else if ( object.isSpotLight ) {
+			} else if ( object.isSpotLight ) {
 
-					helper = new THREE.SpotLightHelper( object, 1 );
+				helper = new THREE.SpotLightHelper( object, 1 );
 
-				} else if ( object.isHemisphereLight ) {
+			} else if ( object.isHemisphereLight ) {
 
-					helper = new THREE.HemisphereLightHelper( object, 1 );
+				helper = new THREE.HemisphereLightHelper( object, 1 );
 
-				} else if ( object.isSkinnedMesh ) {
+			} else if ( object.isSkinnedMesh ) {
 
-					helper = new THREE.SkeletonHelper( object.skeleton.bones[ 0 ] );
+				helper = new THREE.SkeletonHelper( object.skeleton.bones[ 0 ] );
 
-				} else {
+			} else {
 
-					// no helper for this object type
-					return;
-
-				}
-
-				var picker = new THREE.Mesh( geometry, material );
-				picker.name = 'picker';
-				picker.userData.object = object;
-				helper.add( picker );
+				// no helper for this object type
+				return;
 
 			}
+
+			var picker = new THREE.Mesh( geometry, material );
+			picker.name = 'picker';
+			picker.userData.object = object;
+			helper.add( picker );
 
 			this.sceneHelpers.add( helper );
 			this.helpers[ object.id ] = helper;
