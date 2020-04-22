@@ -2,14 +2,14 @@
  * @author mrdoob / http://mrdoob.com/
  */
 
-import * as THREE from '../../build/three.module.js';
+import * as THREE from '../build/three.module.js';
 
-import { ColladaExporter } from '../../examples/jsm/exporters/ColladaExporter.js';
-import { DRACOExporter } from '../../examples/jsm/exporters/DRACOExporter.js';
-import { GLTFExporter } from '../../examples/jsm/exporters/GLTFExporter.js';
-import { OBJExporter } from '../../examples/jsm/exporters/OBJExporter.js';
-import { PLYExporter } from '../../examples/jsm/exporters/PLYExporter.js';
-import { STLExporter } from '../../examples/jsm/exporters/STLExporter.js';
+import { ColladaExporter } from '../examples/jsm/exporters/ColladaExporter.js';
+import { DRACOExporter } from '../examples/jsm/exporters/DRACOExporter.js';
+import { GLTFExporter } from '../examples/jsm/exporters/GLTFExporter.js';
+import { OBJExporter } from '../examples/jsm/exporters/OBJExporter.js';
+import { PLYExporter } from '../examples/jsm/exporters/PLYExporter.js';
+import { STLExporter } from '../examples/jsm/exporters/STLExporter.js';
 
 import { UIPanel, UIRow, UIHorizontalRule } from './libs/ui.js';
 

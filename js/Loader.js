@@ -2,23 +2,23 @@
  * @author mrdoob / http://mrdoob.com/
  */
 
-import * as THREE from '../../build/three.module.js';
+import * as THREE from '../build/three.module.js';
 
-import { AMFLoader } from '../../examples/jsm/loaders/AMFLoader.js';
-import { ColladaLoader } from '../../examples/jsm/loaders/ColladaLoader.js';
-import { DRACOLoader } from '../../examples/jsm/loaders/DRACOLoader.js';
-import { FBXLoader } from '../../examples/jsm/loaders/FBXLoader.js';
-import { GLTFLoader } from '../../examples/jsm/loaders/GLTFLoader.js';
-import { KMZLoader } from '../../examples/jsm/loaders/KMZLoader.js';
-import { MD2Loader } from '../../examples/jsm/loaders/MD2Loader.js';
-import { MTLLoader } from '../../examples/jsm/loaders/MTLLoader.js';
-import { OBJLoader } from '../../examples/jsm/loaders/OBJLoader.js';
-import { PLYLoader } from '../../examples/jsm/loaders/PLYLoader.js';
-import { STLLoader } from '../../examples/jsm/loaders/STLLoader.js';
-import { SVGLoader } from '../../examples/jsm/loaders/SVGLoader.js';
-import { TDSLoader } from '../../examples/jsm/loaders/TDSLoader.js';
-import { VTKLoader } from '../../examples/jsm/loaders/VTKLoader.js';
-import { VRMLLoader } from '../../examples/jsm/loaders/VRMLLoader.js';
+import { AMFLoader } from '../examples/jsm/loaders/AMFLoader.js';
+import { ColladaLoader } from '../examples/jsm/loaders/ColladaLoader.js';
+import { DRACOLoader } from '../examples/jsm/loaders/DRACOLoader.js';
+import { FBXLoader } from '../examples/jsm/loaders/FBXLoader.js';
+import { GLTFLoader } from '../examples/jsm/loaders/GLTFLoader.js';
+import { KMZLoader } from '../examples/jsm/loaders/KMZLoader.js';
+import { MD2Loader } from '../examples/jsm/loaders/MD2Loader.js';
+import { MTLLoader } from '../examples/jsm/loaders/MTLLoader.js';
+import { OBJLoader } from '../examples/jsm/loaders/OBJLoader.js';
+import { PLYLoader } from '../examples/jsm/loaders/PLYLoader.js';
+import { STLLoader } from '../examples/jsm/loaders/STLLoader.js';
+import { SVGLoader } from '../examples/jsm/loaders/SVGLoader.js';
+import { TDSLoader } from '../examples/jsm/loaders/TDSLoader.js';
+import { VTKLoader } from '../examples/jsm/loaders/VTKLoader.js';
+import { VRMLLoader } from '../examples/jsm/loaders/VRMLLoader.js';
 
 import { AddObjectCommand } from './commands/AddObjectCommand.js';
 import { SetSceneCommand } from './commands/SetSceneCommand.js';

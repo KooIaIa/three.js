@@ -5,7 +5,7 @@
  * @author WestLangley / http://github.com/WestLangley
  */
 
-import * as THREE from '../../build/three.module.js';
+import * as THREE from '../build/three.module.js';
 
 var EditorControls = function ( object, domElement ) {
 
